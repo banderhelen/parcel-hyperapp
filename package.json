@@ -6,6 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html --out-dir docs",
     "build": "parcel build src/index.html --out-dir docs --public-url ./",
+    "deploy": "npm run build && git add . && git commit -a -m \"latest build\" && git push origin master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,5 +16,8 @@
     "babel-preset-env": "^1.7.0",
     "hyperapp": "^1.2.8",
     "parcel-bundler": "^1.9.7"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
   }
 }
